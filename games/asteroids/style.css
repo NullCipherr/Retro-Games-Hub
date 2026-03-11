@@ -1,0 +1,19 @@
+/* Asteroids Specific Styles */
+/* Most styles are imported from ../_shared/global.css */
+
+/* Ensure canvas fits correctly if needed, though global handles most */
+canvas#asteroids {
+    display: block;
+    background-color: rgba(10, 10, 16, 0.95);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    canvas#asteroids {
+        max-height: 65vh;
+        width: auto;
+    }
+}

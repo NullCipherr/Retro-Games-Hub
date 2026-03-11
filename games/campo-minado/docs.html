@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Minesweeper - Documentação</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">ARC<span class="highlight">GAMES</span></a>
+        <div class="nav-links">
+            <a href="../../index.html">🏠 Hub</a>
+        </div>
+    </nav>
+
+    <div class="app-container docs-container">
+        <div class="docs-header">
+            <h1>NEON <span class="highlight">MINESWEEPER</span></h1>
+            <p>Guia Completo do Jogo</p>
+        </div>
+
+        <div class="docs-content">
+            <div class="doc-card">
+                <h2>💣 Como Jogar</h2>
+                <p>
+                    O objetivo do Campo Minado é revelar todas as células vazias do tabuleiro sem detonar nenhuma mina.
+                    Use os números revelados para deduzir onde as minas estão escondidas.
+                </p>
+            </div>
+
+            <div class="doc-card">
+                <h2>🕹️ Controles</h2>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <div class="key">Click Esq</div>
+                        <p>Revelar Célula</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="key">Click Dir</div>
+                        <p>Colocar Bandeira</p>
+                    </div>
+                    <div class="control-item">
+                        <div class="key">R</div>
+                        <p>Reiniciar Jogo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <h2>🔢 Regras</h2>
+                <p><strong>Números:</strong> Um número em uma célula indica quantas minas existem nas 8 células vizinhas
+                    (adjacentes e diagonais).</p>
+                <p><strong>Bandeiras:</strong> Use bandeiras para marcar células onde você tem certeza que existe uma
+                    mina. Isso ajuda a evitar cliques acidentais.</p>
+                <p><strong>Vitória:</strong> Você vence quando todas as células que NÃO contêm minas forem reveladas.
+                </p>
+            </div>
+
+            <div class="doc-card">
+                <h2>⚡ Dificuldades</h2>
+                <ul class="score-list">
+                    <li>
+                        <span>Fácil</span>
+                        <span class="highlight">10x10 (10 minas)</span>
+                    </li>
+                    <li>
+                        <span>Médio</span>
+                        <span class="highlight">15x15 (30 minas)</span>
+                    </li>
+                    <li>
+                        <span>Difícil</span>
+                        <span class="highlight">20x20 (60 minas)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="docs-footer">
+            <a href="game.html" class="cta-button">Começar a Jogar</a>
+        </div>
+    </div>
+</body>
+
+</html>

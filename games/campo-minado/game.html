@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Minesweeper - Jogo</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="game-body">
+    <div class="scanlines"></div>
+    <div class="app-container">
+        <header class="game-header">
+            <h1>NEON <span class="highlight">MINES</span></h1>
+            <button id="btn-menu-return" class="header-btn">← Menu</button>
+        </header>
+
+        <main class="game-layout">
+            <div class="game-board-container">
+                <canvas id="minesweeper" width="600" height="600"></canvas>
+
+                <!-- Menu Overlay -->
+                <div id="menu-overlay" class="modal">
+                    <div class="modal-content menu-content">
+                        <h2 class="menu-title">NEON <span class="highlight">MINES</span></h2>
+                        <div class="difficulty-selector">
+                            <button class="diff-btn selected" data-diff="easy">Fácil (10x10)</button>
+                            <button class="diff-btn" data-diff="medium">Médio (15x15)</button>
+                            <button class="diff-btn" data-diff="hard">Difícil (20x20)</button>
+                        </div>
+                        <div class="menu-buttons">
+                            <button id="btn-start" class="menu-btn primary">Iniciar Jogo</button>
+                            <button id="btn-quit" class="menu-btn">Voltar ao Menu</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Over Modal -->
+                <div id="game-over-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>GAME OVER</h2>
+                        <p>Tempo: <span id="final-time">00:00</span></p>
+                        <p class="game-over-subtitle">Você detonou uma mina!</p>
+                        <div class="modal-buttons">
+                            <button id="restart-btn">Tentar Novamente</button>
+                            <button id="menu-from-gameover" class="secondary-btn">Menu Principal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Victory Modal -->
+                <div id="victory-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>VITÓRIA!</h2>
+                        <p>Tempo: <span id="victory-time">00:00</span></p>
+                        <p class="victory-subtitle">Campo limpo com sucesso.</p>
+                        <div class="modal-buttons">
+                            <button id="next-level-btn">Jogar Novamente</button>
+                            <button id="menu-from-victory" class="secondary-btn">Menu Principal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="stats-panel">
+                <div class="stat-box">
+                    <h3>Minas</h3>
+                    <p id="mines-count">10</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Tempo</h3>
+                    <p id="timer">00:00</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Bandeiras</h3>
+                    <p id="flags-count">0</p>
+                </div>
+                <div class="controls-info">
+                    <p><span>Click Esq</span> Revelar</p>
+                    <p><span>Click Dir</span> Bandeira</p>
+                    <p><span>R</span> Reiniciar</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

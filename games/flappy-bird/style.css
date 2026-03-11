@@ -1,0 +1,50 @@
+/* Flappy Bird Specific Styles */
+/* Most styles are imported from ../_shared/global.css */
+
+canvas#flappy-bird {
+    display: block;
+    background-color: rgba(10, 10, 16, 0.95);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flappy Bird Specific Styles */
+.medal-box {
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.medal {
+    font-size: 3rem;
+    margin-top: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    animation: medalFloat 2s ease-in-out infinite;
+}
+
+@keyframes medalFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.menu-instruction {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    canvas#flappy-bird {
+        max-height: 65vh;
+        width: auto;
+    }
+}

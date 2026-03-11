@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCGames - Hub</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/hub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="intro-body">
+    <div class="scanlines"></div>
+    <canvas id="intro-bg"></canvas>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <div class="hub-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar jogos..." onkeyup="filterGames()">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Navegação</h3>
+                <ul class="category-list">
+                    <li class="category-item active" data-view="home" onclick="showHomeView()">
+                        <span class="category-icon">🏠</span>
+                        <span>Início</span>
+                        <span class="category-count">✨</span>
+                    </li>
+                    <li class="category-item" data-view="all" onclick="showAllGames()">
+                        <span class="category-icon">🎮</span>
+                        <span>Todos os Jogos</span>
+                        <span class="category-count">9</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- All Games Options (hidden by default) -->
+            <div id="allGamesOptions" style="display: none;">
+                <div class="category-section">
+                    <h3 class="category-title">Categorias</h3>
+                    <ul class="category-list">
+                        <li class="category-item" data-category="acao" onclick="filterByCategory('acao')">
+                            <span class="category-icon">⚡</span>
+                            <span>Ação</span>
+                            <span class="category-count">4</span>
+                        </li>
+                        <li class="category-item" data-category="estrategia" onclick="filterByCategory('estrategia')">
+                            <span class="category-icon">🧠</span>
+                            <span>Estratégia</span>
+                            <span class="category-count">3</span>
+                        </li>
+                        <li class="category-item" data-category="cartas" onclick="filterByCategory('cartas')">
+                            <span class="category-icon">🃏</span>
+                            <span>Cartas</span>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item" data-category="arcade" onclick="filterByCategory('arcade')">
+                            <span class="category-icon">🕹️</span>
+                            <span>Arcade</span>
+                            <span class="category-count">1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="sidebar-spacer" style="flex: 1;"></div>
+            <div class="sidebar-divider"></div>
+
+            <div class="category-section">
+                <ul class="category-list">
+                    <li class="category-item" data-view="profile" onclick="showProfile()">
+                        <span class="category-icon">👤</span>
+                        <span>Perfil</span>
+                    </li>
+                    <li class="category-item" data-view="settings" onclick="showSettings()">
+                        <span class="category-icon">⚙️</span>
+                        <span>Configurações</span>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="sidebar-collapse" onclick="toggleSidebarCollapse()" title="Recolher sidebar">
+                <span id="collapseIcon">◀</span>
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Home View Section -->
+            <div id="homeView" class="home-view">
+                <!-- Welcome Banner -->
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <h2 class="welcome-title">Bem-vindo ao ARCGames! 🎮</h2>
+                        <p class="welcome-text">Sua coleção premium de jogos clássicos com visual neon futurista</p>
+                        <div class="welcome-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">🎯</div>
+                                <div class="stat-value" data-target="9">0</div>
+                                <div class="stat-label">Jogos Disponíveis</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">🏆</div>
+                                <div class="stat-value" data-target="4">0</div>
+                                <div class="stat-label">Categorias</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">⚡</div>
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Diversão</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Games -->
+                <div class="featured-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">⭐</span>
+                        Jogos em Destaque
+                    </h3>
+                    <div class="featured-grid">
+                        <a href="games/space-invaders/index.html" class="featured-card">
+                            <div class="featured-badge">Popular</div>
+                            <div class="featured-icon">👾</div>
+                            <div class="featured-title">Space Invaders</div>
+                            <div class="featured-desc">O clássico arcade que definiu uma geração</div>
+                        </a>
+                        <a href="games/tetris/index.html" class="featured-card">
+                            <div class="featured-badge">Clássico</div>
+                            <div class="featured-icon">🧩</div>
+                            <div class="featured-title">Tetris</div>
+                            <div class="featured-desc">O quebra-cabeça mais viciante de todos os tempos</div>
+                        </a>
+                        <a href="games/chess/index.html" class="featured-card">
+                            <div class="featured-badge">Estratégia</div>
+                            <div class="featured-icon">♔</div>
+                            <div class="featured-title">Xadrez</div>
+                            <div class="featured-desc">O jogo dos reis com visual futurista</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Daily Recommendation -->
+                <div class="recommendation-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">🎲</span>
+                        Recomendação do Dia
+                    </h3>
+                    <div class="recommendation-card">
+                        <div class="rec-left">
+                            <div class="rec-icon">🧱</div>
+                        </div>
+                        <div class="rec-content">
+                            <div class="rec-badge">Jogo do Dia</div>
+                            <h4 class="rec-title">Breakout</h4>
+                            <p class="rec-desc">Destrua blocos neon com física precisa e power-ups incríveis. Perfeito
+                                para uma sessão rápida de diversão!</p>
+                            <a href="games/breakout/index.html" class="rec-btn">Jogar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="quick-access-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">🚀</span>
+                        Acesso Rápido
+                    </h3>
+                    <div class="quick-grid">
+                        <div class="quick-item" onclick="filterByCategory('acao')">
+                            <div class="quick-icon">⚡</div>
+                            <div class="quick-label">Ação</div>
+                        </div>
+                        <div class="quick-item" onclick="filterByCategory('estrategia')">
+                            <div class="quick-icon">🧠</div>
+                            <div class="quick-label">Estratégia</div>
+                        </div>
+                        <div class="quick-item" onclick="filterByCategory('arcade')">
+                            <div class="quick-icon">🕹️</div>
+                            <div class="quick-label">Arcade</div>
+                        </div>
+                        <div class="quick-item" onclick="filterByCategory('cartas')">
+                            <div class="quick-icon">🃏</div>
+                            <div class="quick-label">Cartas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gamesToolbar" class="games-toolbar" style="display: none;">
+                <div class="toolbar-group">
+                    <span class="toolbar-label">Ordenar:</span>
+                    <button class="toolbar-btn" onclick="sortGames('name')">🔤 Nome</button>
+                    <button class="toolbar-btn" onclick="sortGames('category')">📁 Categoria</button>
+                </div>
+                <div class="toolbar-group">
+                    <span class="toolbar-label">Visualização:</span>
+                    <button class="toolbar-btn" onclick="setViewMode('grid')">▦ Grade</button>
+                    <button class="toolbar-btn" onclick="setViewMode('list')">☰ Lista</button>
+                </div>
+            </div>
+
+            <div class="games-grid" id="gamesGrid" style="display: none;">
+                <a href="games/space-invaders/index.html" class="game-card" data-category="acao" data-name="space invaders">
+                    <div class="game-icon">👾</div>
+                    <div class="game-category">Ação</div>
+                    <div class="game-title">Space Invaders</div>
+                    <div class="game-desc">Defenda a Terra da invasão alienígena neste clássico arcade.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/breakout/index.html" class="game-card" data-category="acao" data-name="breakout">
+                    <div class="game-icon">🧱</div>
+                    <div class="game-category">Ação</div>
+                    <div class="game-title">Breakout</div>
+                    <div class="game-desc">Destrua blocos neon com física precisa e power-ups.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/tetris/index.html" class="game-card" data-category="arcade" data-name="tetris">
+                    <div class="game-icon">🧩</div>
+                    <div class="game-category">Arcade</div>
+                    <div class="game-title">Tetris</div>
+                    <div class="game-desc">Organize os blocos caindo e limpe as linhas.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/flappy-bird/index.html" class="game-card" data-category="acao" data-name="flappy bird">
+                    <div class="game-icon">🐦</div>
+                    <div class="game-category">Ação</div>
+                    <div class="game-title">Flappy Bird</div>
+                    <div class="game-desc">Voe entre os canos e busque a medalha de diamante.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/asteroids/index.html" class="game-card" data-category="acao" data-name="asteroids">
+                    <div class="game-icon">☄️</div>
+                    <div class="game-category">Ação</div>
+                    <div class="game-title">Asteroids</div>
+                    <div class="game-desc">Navegue pelo espaço e destrua asteroides perigosos.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/blackjack/index.html" class="game-card" data-category="cartas" data-name="blackjack">
+                    <div class="game-icon">🃏</div>
+                    <div class="game-category">Cartas</div>
+                    <div class="game-title">Blackjack</div>
+                    <div class="game-desc">Desafie o dealer e tente chegar ao 21 sem estourar.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/checkers/index.html" class="game-card" data-category="estrategia" data-name="damas checkers">
+                    <div class="game-icon">♟️</div>
+                    <div class="game-category">Estratégia</div>
+                    <div class="game-title">Damas</div>
+                    <div class="game-desc">Estratégia clássica de tabuleiro com visual neon.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/chess/index.html" class="game-card" data-category="estrategia" data-name="xadrez chess">
+                    <div class="game-icon">♔</div>
+                    <div class="game-category">Estratégia</div>
+                    <div class="game-title">Xadrez</div>
+                    <div class="game-desc">O jogo dos reis com estética futurista.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+
+                <a href="games/campo-minado/index.html" class="game-card" data-category="estrategia"
+                    data-name="campo minado minesweeper">
+                    <div class="game-icon">💣</div>
+                    <div class="game-category">Estratégia</div>
+                    <div class="game-title">Campo Minado</div>
+                    <div class="game-desc">Use a lógica para desarmar o campo minado.</div>
+                    <div class="play-btn">Jogar</div>
+                </a>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>Nenhum jogo encontrado</h3>
+                <p>Tente buscar com outros termos</p>
+            </div>
+        </main>
+
+        <!-- Profile View -->
+        <div id="profileView" class="profile-view" style="display: none;">
+            <h2 class="section-title"><span class="title-icon">👤</span> Meu Perfil</h2>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="currentAvatar">👾</div>
+                    <div class="profile-info">
+                        <h3 id="profileNameDisplay">Convidado</h3>
+                        <p>Nível 1 • Explorador</p>
+                    </div>
+                </div>
+
+                <div class="profile-form">
+                    <div class="form-group">
+                        <label>Nome de Usuário</label>
+                        <input type="text" id="usernameInput" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Avatar</label>
+                        <div class="avatar-grid">
+                            <div class="avatar-option" onclick="selectAvatar('👾')">👾</div>
+                            <div class="avatar-option" onclick="selectAvatar('👨‍🚀')">👨‍🚀</div>
+                            <div class="avatar-option" onclick="selectAvatar('👽')">👽</div>
+                            <div class="avatar-option" onclick="selectAvatar('🤖')">🤖</div>
+                            <div class="avatar-option" onclick="selectAvatar('🐱')">🐱</div>
+                            <div class="avatar-option" onclick="selectAvatar('🦊')">🦊</div>
+                        </div>
+                    </div>
+
+                    <button class="save-btn" onclick="saveProfile()">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings View -->
+        <div id="settingsView" class="settings-view" style="display: none;">
+            <h2 class="section-title"><span class="title-icon">⚙️</span> Configurações</h2>
+            <div class="settings-container">
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Animações de Fundo</h4>
+                        <p>Ativar ou desativar o fundo cósmico</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked id="bgToggle" onchange="toggleBackground()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Sons da Interface</h4>
+                        <p>Efeitos sonoros ao interagir</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="soundToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/hub-intro.js"></script>
+    <script>
+        // Show Home View
+        function showHomeView() {
+            hideAllViews();
+            const homeView = document.getElementById('homeView');
+            const categoryItems = document.querySelectorAll('.category-item');
+
+            // Toggle views
+            homeView.style.display = 'block';
+
+            // Update active state
+            categoryItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-view') === 'home') {
+                    item.classList.add('active');
+                }
+            });
+
+            // Animate stats
+            animateStats();
+
+            // Clear search
+            document.getElementById('searchInput').value = '';
+        }
+
+        // Show All Games
+        function showAllGames() {
+            hideAllViews();
+            const gamesGrid = document.getElementById('gamesGrid');
+            const gamesToolbar = document.getElementById('gamesToolbar');
+            const allGamesOptions = document.getElementById('allGamesOptions');
+            const categoryItems = document.querySelectorAll('.category-item');
+
+            // Toggle views
+            gamesGrid.style.display = 'grid';
+            gamesToolbar.style.display = 'flex';
+            allGamesOptions.style.display = 'block';
+
+            // Update active state
+            categoryItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-view') === 'all') {
+                    item.classList.add('active');
+                }
+            });
+
+            // Show all games
+            const cards = document.querySelectorAll('.game-card');
+            cards.forEach(card => card.style.display = 'flex');
+
+            // Clear search
+            document.getElementById('searchInput').value = '';
+        }
+
+        // Animate statistics counter
+        function animateStats() {
+            const statValues = document.querySelectorAll('.stat-value[data-target]');
+
+            statValues.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 50);
+            });
+        }
+
+        // Filter games by search
+        function filterGames() {
+            // Switch to all games view if searching
+            showAllGames();
+
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.game-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                if (name.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            // Switch to all games view
+            hideAllViews();
+            const gamesGrid = document.getElementById('gamesGrid');
+            const gamesToolbar = document.getElementById('gamesToolbar');
+            const allGamesOptions = document.getElementById('allGamesOptions');
+
+            gamesGrid.style.display = 'grid';
+            gamesToolbar.style.display = 'flex';
+            allGamesOptions.style.display = 'block';
+
+            const cards = document.querySelectorAll('.game-card');
+            const categoryItems = document.querySelectorAll('.category-item');
+            let visibleCount = 0;
+
+            // Update active category
+            categoryItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-category') === category) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Clear search
+            document.getElementById('searchInput').value = '';
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Toggle sidebar collapse
+        function toggleSidebarCollapse() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.querySelector('.main-content');
+            const collapseIcon = document.getElementById('collapseIcon');
+
+            sidebar.classList.toggle('collapsed');
+
+            if (sidebar.classList.contains('collapsed')) {
+                collapseIcon.textContent = '▶';
+                mainContent.style.marginLeft = '60px';
+                mainContent.style.width = 'calc(100% - 60px)';
+            } else {
+                collapseIcon.textContent = '◀';
+                mainContent.style.marginLeft = '280px';
+                mainContent.style.width = 'calc(100% - 280px)';
+            }
+        }
+
+        // Toggle sidebar on mobile
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.querySelector('.sidebar-toggle');
+
+            if (window.innerWidth <= 968 &&
+                !sidebar.contains(e.target) &&
+                !toggle.contains(e.target) &&
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Sort games
+        function sortGames(sortBy) {
+            const grid = document.getElementById('gamesGrid');
+            const cards = Array.from(document.querySelectorAll('.game-card'));
+
+            cards.sort((a, b) => {
+                if (sortBy === 'name') {
+                    const nameA = a.querySelector('.game-title').textContent;
+                    const nameB = b.querySelector('.game-title').textContent;
+                    return nameA.localeCompare(nameB);
+                } else if (sortBy === 'category') {
+                    const catA = a.getAttribute('data-category');
+                    const catB = b.getAttribute('data-category');
+                    return catA.localeCompare(catB);
+                }
+            });
+
+            // Re-append sorted cards
+            cards.forEach(card => grid.appendChild(card));
+        }
+
+        // Set view mode
+        function setViewMode(mode) {
+            const grid = document.getElementById('gamesGrid');
+
+            if (mode === 'list') {
+                grid.style.gridTemplateColumns = '1fr';
+            } else {
+                grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            animateStats();
+            loadProfile();
+        });
+
+        // Profile & Settings Logic
+        let selectedAvatar = '👾';
+
+        function showProfile() {
+            hideAllViews();
+            document.getElementById('profileView').style.display = 'block';
+            updateActiveCategory('profile');
+
+            // Load current data into inputs
+            const profile = JSON.parse(localStorage.getItem('arcProfile')) || { name: 'Convidado', avatar: '👾' };
+            document.getElementById('usernameInput').value = profile.name;
+            selectAvatar(profile.avatar);
+        }
+
+        function showSettings() {
+            hideAllViews();
+            document.getElementById('settingsView').style.display = 'block';
+            updateActiveCategory('settings');
+        }
+
+        function hideAllViews() {
+            document.getElementById('homeView').style.display = 'none';
+            document.getElementById('gamesGrid').style.display = 'none';
+            document.getElementById('gamesToolbar').style.display = 'none';
+            document.getElementById('allGamesOptions').style.display = 'none';
+            document.getElementById('profileView').style.display = 'none';
+            document.getElementById('settingsView').style.display = 'none';
+            document.getElementById('noResults').style.display = 'none';
+        }
+
+        function updateActiveCategory(viewName) {
+            const categoryItems = document.querySelectorAll('.category-item');
+            categoryItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-view') === viewName) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        function selectAvatar(avatar) {
+            selectedAvatar = avatar;
+            document.querySelectorAll('.avatar-option').forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.textContent === avatar) opt.classList.add('selected');
+            });
+        }
+
+        function saveProfile() {
+            const name = document.getElementById('usernameInput').value || 'Convidado';
+            const profile = {
+                name: name,
+                avatar: selectedAvatar
+            };
+            localStorage.setItem('arcProfile', JSON.stringify(profile));
+            loadProfile();
+            alert('Perfil salvo com sucesso!');
+        }
+
+        function loadProfile() {
+            const profile = JSON.parse(localStorage.getItem('arcProfile'));
+            if (profile) {
+                document.getElementById('profileNameDisplay').textContent = profile.name;
+                document.getElementById('currentAvatar').textContent = profile.avatar;
+
+                // Update welcome message if on home
+                const welcomeTitle = document.querySelector('.welcome-title');
+                if (welcomeTitle) {
+                    welcomeTitle.innerHTML = `Bem-vindo, ${profile.name}! 🎮`;
+                }
+            }
+        }
+
+        function toggleBackground() {
+            const canvas = document.getElementById('intro-bg');
+            const isChecked = document.getElementById('bgToggle').checked;
+            canvas.style.display = isChecked ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
