@@ -253,12 +253,12 @@ Observação: você não precisa editar cards manualmente no `index.html`.
 
 ## Licença
 
-Este repositório **ainda não possui um arquivo de licença explícito**.
+Distribuído sob a licença **MIT**.
 
-Recomendação: definir a licença antes de uso comercial/distribuição pública para evitar ambiguidades jurídicas.
+Consulte o arquivo [LICENSE](LICENSE) para os termos completos.
 
 ---
 
 <div align="center">
-  <p>Desenvolvido por <a href="https://github.com/NullCipherr">NullCipherr</a></p>
+  <p>Desenvolvido por <a href="https://github.com/NullCipherr">Andrei Costa</a></p>
 </div>
