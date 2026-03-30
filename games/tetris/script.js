@@ -409,13 +409,14 @@ function startGame() {
 }
 
 function quitToMenu() {
-    window.location.href = 'intro.html';
+    window.location.href = 'index.html';
 }
 
 // Button Listeners
 document.getElementById('restart-btn').addEventListener('click', startGame);
 document.getElementById('resume-btn').addEventListener('click', togglePause);
 document.getElementById('btn-quit').addEventListener('click', quitToMenu);
+document.getElementById('btn-quit-pause').addEventListener('click', quitToMenu);
 document.getElementById('btn-menu-return').addEventListener('click', quitToMenu);
 
 // Initial Start

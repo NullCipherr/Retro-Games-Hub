@@ -1,5 +1,5 @@
 /* Tetris Specific Styles */
-/* Most styles are imported from ../_shared/global.css */
+/* Base compartilhada em ../../assets/css/game-ui.css + game-ui-legacy-bridge.css */
 
 canvas#tetris {
     display: block;

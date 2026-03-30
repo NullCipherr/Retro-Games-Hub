@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-03-29T02:12:22-03:00",
+  "games": [
+    {
+      "slug": "asteroids",
+      "title": "Asteroids",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "☄️",
+      "description": "Navegue pelo espaço e destrua asteroides perigosos.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": false
+    },
+    {
+      "slug": "blackjack",
+      "title": "Blackjack",
+      "category": "cartas",
+      "categoryLabel": "Cartas",
+      "icon": "🃏",
+      "description": "Desafie o dealer e tente chegar ao 21 sem estourar.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": false
+    },
+    {
+      "slug": "breakout",
+      "title": "Breakout",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "🧱",
+      "description": "Destrua blocos neon com física precisa e power-ups.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": true
+    },
+    {
+      "slug": "campo-minado",
+      "title": "Campo Minado",
+      "category": "estrategia",
+      "categoryLabel": "Estratégia",
+      "icon": "💣",
+      "description": "Use a lógica para desarmar o campo minado.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": false
+    },
+    {
+      "slug": "checkers",
+      "title": "Damas",
+      "category": "estrategia",
+      "categoryLabel": "Estratégia",
+      "icon": "♟️",
+      "description": "Estratégia clássica de tabuleiro com visual neon.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": false
+    },
+    {
+      "slug": "chess",
+      "title": "Xadrez",
+      "category": "estrategia",
+      "categoryLabel": "Estratégia",
+      "icon": "♔",
+      "description": "O jogo dos reis com estética futurista.",
+      "badge": "Estratégia",
+      "featured": true,
+      "recommended": false
+    },
+    {
+      "slug": "flappy-bird",
+      "title": "Flappy Bird",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "🐦",
+      "description": "Voe entre os canos e busque a medalha de diamante.",
+      "badge": "Destaque",
+      "featured": false,
+      "recommended": false
+    },
+    {
+      "slug": "memory-match-2",
+      "title": "Memory Match 2.0",
+      "category": "estrategia",
+      "categoryLabel": "Estratégia",
+      "icon": "🧠",
+      "description": "Memory Match 2.0 com métricas de tempo, jogadas e sequência.",
+      "badge": "2.0",
+      "featured": false,
+      "recommended": true
+    },
+    {
+      "slug": "pong-2",
+      "title": "Pong 2.0",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "🏓",
+      "description": "Pong 2.0 contra IA adaptativa com rally competitivo.",
+      "badge": "2.0",
+      "featured": true,
+      "recommended": false
+    },
+    {
+      "slug": "snake-2",
+      "title": "Snake 2.0",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "🐍",
+      "description": "Snake 2.0 com aceleração progressiva e HUD moderno.",
+      "badge": "2.0",
+      "featured": true,
+      "recommended": false
+    },
+    {
+      "slug": "space-invaders",
+      "title": "Space Invaders",
+      "category": "acao",
+      "categoryLabel": "Ação",
+      "icon": "👾",
+      "description": "Defenda a Terra da invasão alienígena neste clássico arcade.",
+      "badge": "Popular",
+      "featured": true,
+      "recommended": false
+    },
+    {
+      "slug": "tetris",
+      "title": "Tetris",
+      "category": "arcade",
+      "categoryLabel": "Arcade",
+      "icon": "🧩",
+      "description": "Organize os blocos caindo e limpe as linhas.",
+      "badge": "Clássico",
+      "featured": true,
+      "recommended": false
+    }
+  ]
+}

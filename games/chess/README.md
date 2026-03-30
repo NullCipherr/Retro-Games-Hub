@@ -26,12 +26,11 @@ Xadrez clássico com uma estética neon futurista.
 
 ```
 Chess/
-├── index.html      # Intro
+├── index.html      # Entrada
 ├── game.html       # Tabuleiro
 ├── docs.html       # Regras
 ├── style.css       # Estilos
 ├── script.js       # Lógica do Xadrez
-└── intro.js        # Animação Intro
 ```
 
 ## 🔧 Tecnologias

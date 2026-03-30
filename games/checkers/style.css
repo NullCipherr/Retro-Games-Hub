@@ -1,7 +1,7 @@
 /* Checkers Specific Styles */
-/* Most styles are imported from ../_shared/global.css */
+/* Base compartilhada em ../../assets/css/game-ui.css + game-ui-legacy-bridge.css */
 
-canvas#checkers {
+canvas#checkers-board {
     display: block;
     background-color: rgba(10, 10, 16, 0.95);
     border-radius: 4px;
@@ -11,7 +11,7 @@ canvas#checkers {
 }
 
 @media (max-width: 768px) {
-    canvas#checkers {
+    canvas#checkers-board {
         max-height: 65vh;
         width: auto;
     }

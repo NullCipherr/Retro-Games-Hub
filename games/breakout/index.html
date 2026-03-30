@@ -4,140 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Breakout - Welcome</title>
-    <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Breakout - ARCGames</title>
+    <meta name="description" content="Breakout com interface padronizada ARCGames e visual neon." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/game-ui.css">
+    <style>
+        :root {
+            --game-ui-cyan: #22e8ff;
+            --game-ui-pink: #ff6c8f;
+        }
+    </style>
 </head>
 
-<body class="intro-body">
-    <canvas id="intro-bg"></canvas>
+<body class="game-ui-body">
+    <header class="topbar">
+        <a class="brand" href="../../index.html">ARCGames</a>
+        <nav class="links">
+            <a href="../../index.html">Hub</a>
+            <a href="docs.html">Guia</a>
+        </nav>
+    </header>
 
-    <!-- Navigation Header -->
-    <nav class="main-nav intro-nav">
-        <a href="../../index.html" class="nav-logo">ARC<span class="highlight">GAMES</span></a>
-        <div class="nav-links">
-            <a href="../../index.html">🏠 Hub</a>
-        </div>
-    </nav>
-
-    <!-- Intro Section -->
-    <div id="intro-section" class="intro-content">
-        <div class="logo-container">
-            <h1 class="intro-title" data-text="NEON BREAKOUT">NEON <span class="highlight">BREAKOUT</span></h1>
-            <div class="logo-glow"></div>
-        </div>
-        <p class="intro-subtitle">Quebre os limites.</p>
-
-        <button id="btn-enter-menu" class="start-button">
-            <span>JOGAR</span>
-            <div class="btn-glitch"></div>
-        </button>
-    </div>
-
-    <!-- Menu Overlay (Initially Hidden) -->
-    <div id="menu-overlay" class="intro-content menu-page-content hidden">
-        <h1 class="menu-title">MENU <span class="highlight">PRINCIPAL</span></h1>
-
-        <div class="menu-buttons">
-            <button id="btn-start-game" class="menu-btn primary">Iniciar Jogo</button>
-
-            <div class="difficulty-selector">
-                <span>Dificuldade:</span>
-                <select id="difficulty-select">
-                    <option value="easy">Fácil</option>
-                    <option value="normal" selected>Normal</option>
-                    <option value="hard">Difícil</option>
-                </select>
+    <main class="layout">
+        <section class="game-shell" aria-label="Entrada do jogo Breakout">
+            <div class="overlay overlay-static">
+                <h1>Breakout</h1>
+                <p>Reflexos rápidos, mira precisa e ritmo arcade para quebrar todos os blocos.</p>
+                <a href="game.html" class="game-ui-btn">Iniciar jogo</a>
             </div>
+        </section>
 
-            <button id="btn-options" class="menu-btn">Opções</button>
-            <button id="btn-back-intro" class="secondary-btn">Voltar</button>
-        </div>
-    </div>
-
-    <!-- Options Modal -->
-    <div id="options-modal" class="modal hidden">
-        <div class="modal-content">
-            <h2>OPÇÕES</h2>
-            <div class="option-row">
-                <label for="opt-sound">Efeitos Sonoros</label>
-                <input type="checkbox" id="opt-sound" checked>
+        <aside class="panel" aria-label="Resumo e controles">
+            <h2>Resumo</h2>
+            <p>Experiência clássica de arcade com progressão por precisão e sobrevivência.</p>
+            <div class="controls">
+                <h3>Controles</h3>
+                <ul>
+                    <li>Mouse ou setas: mover raquete</li>
+                    <li>Espaço: iniciar rodada</li>
+                    <li>P: pausar</li>
+                </ul>
             </div>
-            <div class="option-row">
-                <label for="opt-particles">Partículas</label>
-                <input type="checkbox" id="opt-particles" checked>
+            <p class="status">Dica: priorize ângulos abertos para limpar a fase mais rápido.</p>
+            <div class="panel-actions">
+                <a href="game.html" class="game-ui-btn">Jogar agora</a>
+                <a href="docs.html" class="game-ui-btn secondary">Ver documentação</a>
             </div>
-            <button id="btn-close-options" class="secondary-btn">Voltar</button>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-    <script src="intro.js"></script>
-    <script>
-        // UI Elements
-        const introSection = document.getElementById('intro-section');
-        const menuOverlay = document.getElementById('menu-overlay');
-        const btnEnterMenu = document.getElementById('btn-enter-menu');
-        const btnBackIntro = document.getElementById('btn-back-intro');
-
-        // Menu Logic Elements
-        const startBtn = document.getElementById('btn-start-game');
-        const diffSelect = document.getElementById('difficulty-select');
-        const optionsBtn = document.getElementById('btn-options');
-        const closeOptionsBtn = document.getElementById('btn-close-options');
-        const optionsModal = document.getElementById('options-modal');
-        const soundCheck = document.getElementById('opt-sound');
-        const particlesCheck = document.getElementById('opt-particles');
-
-        // Transition Logic
-        btnEnterMenu.addEventListener('click', () => {
-            introSection.classList.add('hidden');
-            menuOverlay.classList.remove('hidden');
-            menuOverlay.style.animation = 'fadeIn 0.5s ease-out';
-        });
-
-        btnBackIntro.addEventListener('click', () => {
-            menuOverlay.classList.add('hidden');
-            introSection.classList.remove('hidden');
-            introSection.style.animation = 'fadeIn 0.5s ease-out';
-        });
-
-        // Load saved settings
-        if (localStorage.getItem('breakout_difficulty')) {
-            diffSelect.value = localStorage.getItem('breakout_difficulty');
-        }
-        if (localStorage.getItem('breakout_sound')) {
-            soundCheck.checked = localStorage.getItem('breakout_sound') === 'true';
-        }
-        if (localStorage.getItem('breakout_particles')) {
-            particlesCheck.checked = localStorage.getItem('breakout_particles') === 'true';
-        }
-
-        // Start Game
-        startBtn.addEventListener('click', () => {
-            localStorage.setItem('breakout_difficulty', diffSelect.value);
-            window.location.href = 'game.html';
-        });
-
-        // Options Handling
-        optionsBtn.addEventListener('click', () => {
-            optionsModal.classList.remove('hidden');
-        });
-
-        closeOptionsBtn.addEventListener('click', () => {
-            optionsModal.classList.add('hidden');
-        });
-
-        soundCheck.addEventListener('change', (e) => {
-            localStorage.setItem('breakout_sound', e.target.checked);
-        });
-
-        particlesCheck.addEventListener('change', (e) => {
-            localStorage.setItem('breakout_particles', e.target.checked);
-        });
-    </script>
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
 </body>
 
 </html>

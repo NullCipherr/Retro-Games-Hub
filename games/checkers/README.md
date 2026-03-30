@@ -27,12 +27,11 @@ O clássico jogo de Damas com uma estética neon futurista.
 
 ```
 Checkers/
-├── index.html      # Intro
+├── index.html      # Entrada
 ├── game.html       # Tabuleiro
 ├── docs.html       # Regras
 ├── style.css       # Estilos
 ├── script.js       # Lógica do Jogo
-└── intro.js        # Animação Intro
 ```
 
 ## 🔧 Tecnologias

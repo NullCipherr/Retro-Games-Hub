@@ -24,7 +24,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     background:
         radial-gradient(circle at 10% 20%, rgba(188, 19, 254, 0.15) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.15) 0%, transparent 40%),
@@ -634,10 +635,22 @@ button:active {
     font-family: var(--font-main);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
     background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a12 100%);
+}
+
+.game-body .app-container {
+    width: max-content;
+    max-width: none;
+    min-width: 100%;
+    padding: 30px 24px 40px;
+}
+
+.game-body .game-layout {
+    min-width: 1120px;
 }
 
 /* Intro Nav Specifics */
@@ -862,6 +875,12 @@ button:active {
         align-items: center;
     }
 
+    .game-body .game-layout {
+        flex-direction: row;
+        align-items: stretch;
+        min-width: 980px;
+    }
+
     .stats-panel {
         flex-direction: row;
         flex-wrap: wrap;
@@ -885,6 +904,10 @@ button:active {
 
     .controls-info {
         display: none;
+    }
+
+    .game-body .controls-info {
+        display: block;
     }
 
     .game-board-container canvas {

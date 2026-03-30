@@ -4,88 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Tetris - Game</title>
-    <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Tetris - ARCGames</title>
+    <meta name="description" content="Tetris com interface padronizada ARCGames e visual neon." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/game-ui.css">
+    <style>
+        :root {
+            --game-ui-cyan: #31e8ff;
+            --game-ui-pink: #ff5ec4;
+        }
+    </style>
 </head>
 
-<body class="game-body">
-    <!-- Scanline Overlay -->
-    <div class="scanlines"></div>
+<body class="game-ui-body">
+    <header class="topbar">
+        <a class="brand" href="../../index.html">ARCGames</a>
+        <nav class="links">
+            <a href="../../index.html">Hub</a>
+            <a href="docs.html">Guia</a>
+        </nav>
+    </header>
 
-    <nav class="main-nav intro-nav">
-        <a href="../../index.html" class="nav-logo">ARC<span class="highlight">GAMES</span></a>
-        <div class="nav-links">
-            <a href="../../index.html">🏠 Hub</a>
-        </div>
-            <a href="../../index.html">🏠 Hub</a>
-    </nav>
-
-    <div class="app-container">
-        <main class="game-layout">
-            <div class="game-board-container">
-                <canvas id="tetris" width="300" height="600"></canvas>
-
-                <div id="game-over-modal" class="modal hidden">
-                    <div class="modal-content">
-                        <h2>GAME OVER</h2>
-                        <p>Score: <span id="final-score">0</span></p>
-                        <div class="menu-buttons">
-                            <button id="restart-btn">Jogar Novamente</button>
-                            <button id="btn-menu-return" class="secondary-btn">Menu Principal</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="pause-modal" class="modal hidden">
-                    <div class="modal-content">
-                        <h2>PAUSADO</h2>
-                        <div class="menu-buttons">
-                            <button id="resume-btn">Continuar</button>
-                            <button id="btn-quit" class="secondary-btn">Sair para o Menu</button>
-                        </div>
-                    </div>
-                </div>
+    <main class="layout">
+        <section class="game-shell" aria-label="Entrada do jogo Tetris">
+            <div class="overlay overlay-static">
+                <h1>Tetris</h1>
+                <p>Encaixe peças, limpe linhas e sustente o ritmo conforme a velocidade aumenta.</p>
+                <a href="game.html" class="game-ui-btn">Iniciar partida</a>
             </div>
+        </section>
 
-            <aside class="stats-panel">
-                <div class="stat-box next-piece-box">
-                    <h3>Próxima</h3>
-                    <canvas id="next-piece" width="80" height="80"></canvas>
-                </div>
+        <aside class="panel" aria-label="Resumo e controles">
+            <h2>Resumo</h2>
+            <p>Quebra-cabeça arcade clássico com curva de dificuldade progressiva.</p>
+            <div class="controls">
+                <h3>Controles</h3>
+                <ul>
+                    <li>Setas: mover/rotacionar peça</li>
+                    <li>Espaço: queda rápida</li>
+                    <li>P: pausar</li>
+                </ul>
+            </div>
+            <p class="status">Dica: planeje o próximo bloco antes de finalizar a jogada atual.</p>
+            <div class="panel-actions">
+                <a href="game.html" class="game-ui-btn">Jogar agora</a>
+                <a href="docs.html" class="game-ui-btn secondary">Ver documentação</a>
+            </div>
+        </aside>
+    </main>
 
-                <div class="stat-box">
-                    <h3>Pontuação</h3>
-                    <p id="score">0</p>
-                </div>
-
-                <div class="stat-box">
-                    <h3>Nível</h3>
-                    <p id="level">1</p>
-                </div>
-
-                <div class="stat-box">
-                    <h3>Linhas</h3>
-                    <p id="lines">0</p>
-                </div>
-
-                <div class="controls-info">
-                    <p><span>← →</span> Mover</p>
-                    <p><span>↑</span> Rodar</p>
-                    <p><span>↓</span> Descer</p>
-                    <p><span>Space</span> Hard Drop</p>
-                    <p><span>P</span> Pausar</p>
-                </div>
-            </aside>
-        </main>
-    </div>
-    <script src="script.js"></script>
-    <script>
-        // Update quit function to point to intro.html instead of menu.html
-        // We can override the listener or just rely on the script.js update I'll make next
-    </script>
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
 </body>
 
 </html>

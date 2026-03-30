@@ -48,12 +48,11 @@ Um jogo clássico de Flappy Bird reimaginado com visual neon moderno e premium.
 
 ```
 Flappy Bird/
-├── index.html      # Página inicial com animação
+├── index.html      # Página de entrada padronizada
 ├── game.html       # Página do jogo
 ├── docs.html       # Documentação completa
 ├── style.css       # Estilos neon premium
 ├── script.js       # Lógica principal do jogo
-└── intro.js        # Animação da tela inicial
 ```
 
 ## 🎨 Paleta de Cores

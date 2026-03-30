@@ -1,0 +1,70 @@
+[INFO] Iniciando validacao estrutural em 2026-03-29T19:01:06-03:00
+[OK] index.html
+[OK] assets/css/global.css
+[OK] assets/css/hub.css
+[OK] assets/js/hub-intro.js
+[OK] assets/data/games-catalog.json
+[OK] scripts/sync-games-catalog.sh
+[INFO] Jogos encontrados: 12
+[INFO] Validando game: asteroids
+[OK] games/asteroids/index.html
+[OK] games/asteroids/docs.html
+[OK] games/asteroids/script.js
+[OK] games/asteroids/style.css
+[INFO] Validando game: blackjack
+[OK] games/blackjack/index.html
+[OK] games/blackjack/docs.html
+[OK] games/blackjack/script.js
+[OK] games/blackjack/style.css
+[INFO] Validando game: breakout
+[OK] games/breakout/index.html
+[OK] games/breakout/docs.html
+[OK] games/breakout/script.js
+[OK] games/breakout/style.css
+[INFO] Validando game: campo-minado
+[OK] games/campo-minado/index.html
+[OK] games/campo-minado/docs.html
+[OK] games/campo-minado/script.js
+[OK] games/campo-minado/style.css
+[INFO] Validando game: checkers
+[OK] games/checkers/index.html
+[OK] games/checkers/docs.html
+[OK] games/checkers/script.js
+[OK] games/checkers/style.css
+[INFO] Validando game: chess
+[OK] games/chess/index.html
+[OK] games/chess/docs.html
+[OK] games/chess/script.js
+[OK] games/chess/style.css
+[INFO] Validando game: flappy-bird
+[OK] games/flappy-bird/index.html
+[OK] games/flappy-bird/docs.html
+[OK] games/flappy-bird/script.js
+[OK] games/flappy-bird/style.css
+[INFO] Validando game: memory-match-2
+[OK] games/memory-match-2/index.html
+[OK] games/memory-match-2/docs.html
+[OK] games/memory-match-2/script.js
+[OK] games/memory-match-2/style.css
+[INFO] Validando game: pong-2
+[OK] games/pong-2/index.html
+[OK] games/pong-2/docs.html
+[OK] games/pong-2/script.js
+[OK] games/pong-2/style.css
+[INFO] Validando game: snake-2
+[OK] games/snake-2/index.html
+[OK] games/snake-2/docs.html
+[OK] games/snake-2/script.js
+[OK] games/snake-2/style.css
+[INFO] Validando game: space-invaders
+[OK] games/space-invaders/index.html
+[OK] games/space-invaders/docs.html
+[OK] games/space-invaders/script.js
+[OK] games/space-invaders/style.css
+[INFO] Validando game: tetris
+[OK] games/tetris/index.html
+[OK] games/tetris/docs.html
+[OK] games/tetris/script.js
+[OK] games/tetris/style.css
+[INFO] Relatorio markdown: /home/zerocool/Documentos/NullCipherr/Retro-Games-Hub/docs/reports/latest_validacao_report.md
+[INFO] Log bruto: /home/zerocool/Documentos/NullCipherr/Retro-Games-Hub/docs/reports/latest_validacao_report.raw.log

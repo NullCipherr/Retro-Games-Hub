@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Jogo | ARCGames</title>
+    <link rel="stylesheet" href="../../assets/css/game-ui.css">
+    <link rel="stylesheet" href="../../assets/css/game-ui-legacy-bridge.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="game-ui-body">
+    <div class="app-container">
+        <header class="game-header">
+            <h1>TETRIS <span class="highlight">ARCGAMES</span></h1>
+            <button id="btn-menu-return" class="header-btn">← Menu</button>
+        </header>
+
+        <main class="game-layout">
+            <div class="game-board-container">
+                <canvas id="tetris" width="300" height="600"></canvas>
+
+                <div id="game-over-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>GAME OVER</h2>
+                        <p>Score: <span id="final-score">0</span></p>
+                        <div class="menu-buttons">
+                            <button id="restart-btn">Jogar Novamente</button>
+                            <button id="btn-quit" class="secondary-btn">Menu Principal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pause-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>PAUSADO</h2>
+                        <div class="menu-buttons">
+                            <button id="resume-btn">Continuar</button>
+                            <button id="btn-quit-pause" class="secondary-btn">Sair para o Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="stats-panel">
+                <div class="stat-box next-piece-box">
+                    <h3>Próxima</h3>
+                    <canvas id="next-piece" width="80" height="80"></canvas>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Pontuação</h3>
+                    <p id="score">0</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Nível</h3>
+                    <p id="level">1</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Linhas</h3>
+                    <p id="lines">0</p>
+                </div>
+
+                <div class="controls-info">
+                    <p><span>← →</span> Mover</p>
+                    <p><span>↑</span> Rodar</p>
+                    <p><span>↓</span> Descer</p>
+                    <p><span>Space</span> Hard Drop</p>
+                    <p><span>P</span> Pausar</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
+</body>
+
+</html>

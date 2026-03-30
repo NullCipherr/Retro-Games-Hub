@@ -28,12 +28,11 @@ Uma versão moderna e estilizada do clássico Campo Minado.
 
 ```
 CampoMinado/
-├── index.html      # Intro
+├── index.html      # Entrada
 ├── game.html       # Jogo
 ├── docs.html       # Documentação
 ├── style.css       # Estilos
 ├── script.js       # Lógica
-└── intro.js        # Animação Intro
 ```
 
 ## 🔧 Tecnologias

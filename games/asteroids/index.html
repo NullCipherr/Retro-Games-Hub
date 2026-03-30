@@ -4,33 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Asteroids</title>
-    <meta name="description" content="Jogo clássico Asteroids com visual neon moderno e premium">
-    <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Asteroids - ARCGames</title>
+    <meta name="description" content="Asteroids com interface padronizada ARCGames e visual neon." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/game-ui.css">
+    <style>
+        :root {
+            --game-ui-cyan: #2be6ff;
+            --game-ui-pink: #f85dff;
+        }
+    </style>
 </head>
 
-<body class="intro-body">
-    <div class="scanlines"></div>
-    <canvas id="intro-bg"></canvas>
+<body class="game-ui-body">
+    <header class="topbar">
+        <a class="brand" href="../../index.html">ARCGames</a>
+        <nav class="links">
+            <a href="../../index.html">Hub</a>
+            <a href="docs.html">Guia</a>
+        </nav>
+    </header>
 
-    <nav class="main-nav intro-nav">
-        <a href="../../index.html" class="nav-logo">NEON <span class="highlight">ARCADE</span></a>
-        <div class="nav-links">
-            <a href="../../index.html">🏠 Hub</a>
-        </div>
-    </nav>
+    <main class="layout">
+        <section class="game-shell" aria-label="Entrada do jogo Asteroids">
+            <div class="overlay overlay-static">
+                <h1>Asteroids</h1>
+                <p>Navegue pelo caos espacial, destrua asteroides e sobreviva o máximo possível.</p>
+                <a href="game.html" class="game-ui-btn">Iniciar partida</a>
+            </div>
+        </section>
 
-    <div class="intro-content">
-        <h1 class="intro-title" data-text="ASTEROIDS">ASTEROIDS</h1>
-        <p class="intro-subtitle">Navegue pelo Caos Espacial</p>
-        <a href="game.html" class="start-button">DECOLAR</a>
-    </div>
+        <aside class="panel" aria-label="Resumo e controles">
+            <h2>Resumo</h2>
+            <p>Experiência arcade com movimentação vetorial e combate em ritmo acelerado.</p>
+            <div class="controls">
+                <h3>Controles</h3>
+                <ul>
+                    <li>Setas ou WASD: mover nave</li>
+                    <li>Espaço: atirar</li>
+                    <li>P: pausar</li>
+                </ul>
+            </div>
+            <p class="status">Dica: mantenha-se em movimento para evitar colisões.</p>
+            <div class="panel-actions">
+                <a href="game.html" class="game-ui-btn">Jogar agora</a>
+                <a href="docs.html" class="game-ui-btn secondary">Ver documentação</a>
+            </div>
+        </aside>
+    </main>
 
-    <script src="intro.js"></script>
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
 </body>
 
 </html>

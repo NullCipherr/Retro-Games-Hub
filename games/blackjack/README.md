@@ -27,12 +27,11 @@ O clássico jogo de cartas 21 com uma estética neon premium.
 
 ```
 Blackjack/
-├── index.html      # Intro
+├── index.html      # Entrada
 ├── game.html       # Mesa de Jogo
 ├── docs.html       # Regras
 ├── style.css       # Estilos
 ├── script.js       # Lógica do Jogo
-└── intro.js        # Animação Intro
 ```
 
 ## 🔧 Tecnologias

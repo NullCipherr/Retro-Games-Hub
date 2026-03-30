@@ -1,7 +1,7 @@
 /* Chess Specific Styles */
-/* Most styles are imported from ../_shared/global.css */
+/* Base compartilhada em ../../assets/css/game-ui.css + game-ui-legacy-bridge.css */
 
-canvas#chess {
+canvas#chess-board {
     display: block;
     background-color: rgba(10, 10, 16, 0.95);
     border-radius: 4px;
@@ -11,7 +11,7 @@ canvas#chess {
 }
 
 @media (max-width: 768px) {
-    canvas#chess {
+    canvas#chess-board {
         max-height: 65vh;
         width: auto;
     }
