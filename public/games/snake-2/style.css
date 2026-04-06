@@ -1,0 +1,46 @@
+:root {
+  --game-ui-bg: #070b16;
+  --game-ui-card: #0f1728;
+  --game-ui-card-strong: #0d1628;
+  --game-ui-cyan: #00eaff;
+  --game-ui-pink: #ff3da9;
+  --game-ui-muted: #a5aec5;
+}
+
+.game-shell canvas {
+  aspect-ratio: 1;
+}
+
+#restartBtn {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 1100;
+  background: var(--game-ui-cyan);
+  color: #071225;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 12px;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--game-ui-cyan);
+  outline-offset: 2px;
+}

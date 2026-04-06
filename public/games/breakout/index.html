@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout - ARCGames</title>
+    <meta name="description" content="Breakout com interface padronizada ARCGames e visual neon." />
+    
+    <meta property="og:title" content="Breakout - ARCGames" />
+    <meta property="og:description" content="Breakout - ARCGames no Retro Games Hub: página de entrada com resumo e acesso rápido ao jogo." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/game-ui.css">
+    <style>
+        :root {
+            --game-ui-cyan: #22e8ff;
+            --game-ui-pink: #ff6c8f;
+        }
+    </style>
+</head>
+
+<body class="game-ui-body">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+    <header class="topbar">
+        <a class="brand" href="../../index.html">ARCGames</a>
+        <nav class="links" aria-label="Navegação de apoio">
+            <a href="../../index.html">Hub</a>
+            <a href="docs.html">Guia</a>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1" class="layout">
+        <section class="game-shell" aria-label="Entrada do jogo Breakout">
+            <div class="overlay overlay-static">
+                <h1>Breakout</h1>
+                <p>Reflexos rápidos, mira precisa e ritmo arcade para quebrar todos os blocos.</p>
+                <a href="game.html" class="game-ui-btn">Iniciar jogo</a>
+            </div>
+        </section>
+
+        <aside class="panel" aria-label="Resumo e controles">
+            <h2>Resumo</h2>
+            <p>Experiência clássica de arcade com progressão por precisão e sobrevivência.</p>
+            <div class="controls">
+                <h3>Controles</h3>
+                <ul>
+                    <li>Mouse ou setas: mover raquete</li>
+                    <li>Espaço: iniciar rodada</li>
+                    <li>P: pausar</li>
+                </ul>
+            </div>
+            <p class="status">Dica: priorize ângulos abertos para limpar a fase mais rápido.</p>
+            <div class="panel-actions">
+                <a href="game.html" class="game-ui-btn">Jogar agora</a>
+                <a href="docs.html" class="game-ui-btn secondary">Ver documentação</a>
+            </div>
+        </aside>
+    </main>
+
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
+</body>
+
+</html>

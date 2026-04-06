@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake 2.0 - ARCGames</title>
+  
+    <meta name="description" content="Snake 2.0 - ARCGames no Retro Games Hub: página de entrada com resumo e acesso rápido ao jogo." />
+
+    <meta property="og:title" content="Snake 2.0 - ARCGames" />
+    <meta property="og:description" content="Snake 2.0 - ARCGames no Retro Games Hub: página de entrada com resumo e acesso rápido ao jogo." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/game-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="game-ui-body">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">ARCGames</a>
+    <nav class="links" aria-label="Navegação de apoio">
+      <a href="../../index.html">Hub</a>
+      <a href="docs.html">Guia</a>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="layout">
+    <section class="game-shell" aria-label="Área do jogo">
+      <canvas id="snakeCanvas" width="600" height="600" aria-label="Tabuleiro do Snake"></canvas>
+      <div class="overlay" id="startOverlay">
+        <h1>Snake 2.0</h1>
+        <p>Controles fluidos, aceleração progressiva e visual neon refinado.</p>
+        <button id="startBtn">Iniciar partida</button>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="Painel de status">
+      <h2>Status</h2>
+      <p><strong>Pontuação:</strong> <span id="score">0</span></p>
+      <p><strong>Recorde:</strong> <span id="bestScore">0</span></p>
+      <p><strong>Velocidade:</strong> <span id="speed">1x</span></p>
+      <div class="controls">
+        <h3>Controles</h3>
+        <ul>
+          <li>Setas ou WASD: mover</li>
+          <li>P: pausar</li>
+          <li>R: reiniciar</li>
+        </ul>
+      </div>
+      <p id="statusText" class="status">Pronto para começar.</p>
+      <button id="restartBtn" class="secondary">Reiniciar</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+    <script src="../../assets/js/horizontal-wheel-scroll.js"></script>
+</body>
+
+</html>

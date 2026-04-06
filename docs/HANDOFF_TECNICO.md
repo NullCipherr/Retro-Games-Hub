@@ -8,7 +8,8 @@ O Retro Games Hub é um projeto front-end estático com foco em catálogo de jog
 
 - README principal reestruturado em padrão profissional e modular;
 - documentação técnica organizada por domínio em `docs/`;
-- script de validação estrutural com geração de relatório em `docs/reports`;
+- script de validação estrutural + SEO mínimo + acessibilidade básica com geração de relatório em `docs/reports`;
+- convenções de estrutura de jogos e checklist responsivo de release documentados;
 - ativo visual de identidade do projeto em `docs/assets`.
 
 ## Responsabilidades de manutenção
@@ -22,7 +23,7 @@ O Retro Games Hub é um projeto front-end estático com foco em catálogo de jog
 
 - ausência de testes automatizados de gameplay;
 - possível divergência de padrões entre jogos legados;
-- SEO ainda em estágio básico para indexação pública.
+- SEO técnico ainda em estágio básico para indexação pública avançada (canonical/sitemap/robots).
 
 ## Próxima ação recomendada
 

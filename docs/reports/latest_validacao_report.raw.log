@@ -1,70 +1,350 @@
-[INFO] Iniciando validacao estrutural em 2026-03-29T19:01:06-03:00
+[INFO] Iniciando validacao estrutural/seo/a11y em 2026-04-05T21:16:22-03:00
 [OK] index.html
-[OK] assets/css/global.css
-[OK] assets/css/hub.css
-[OK] assets/js/hub-intro.js
-[OK] assets/data/games-catalog.json
+[OK] src/main.js
+[OK] src/App.vue
+[OK] public/assets/css/global.css
+[OK] public/assets/css/game-ui.css
+[OK] public/assets/data/games-catalog.json
 [OK] scripts/sync-games-catalog.sh
 [INFO] Jogos encontrados: 12
 [INFO] Validando game: asteroids
-[OK] games/asteroids/index.html
-[OK] games/asteroids/docs.html
-[OK] games/asteroids/script.js
-[OK] games/asteroids/style.css
+[OK] public/games/asteroids/index.html
+[OK] public/games/asteroids/docs.html
+[OK] public/games/asteroids/script.js
+[OK] public/games/asteroids/style.css
+[OK] public/games/asteroids/game.html (recomendado)
+[OK] public/games/asteroids/README.md (recomendado)
 [INFO] Validando game: blackjack
-[OK] games/blackjack/index.html
-[OK] games/blackjack/docs.html
-[OK] games/blackjack/script.js
-[OK] games/blackjack/style.css
+[OK] public/games/blackjack/index.html
+[OK] public/games/blackjack/docs.html
+[OK] public/games/blackjack/script.js
+[OK] public/games/blackjack/style.css
+[OK] public/games/blackjack/game.html (recomendado)
+[OK] public/games/blackjack/README.md (recomendado)
 [INFO] Validando game: breakout
-[OK] games/breakout/index.html
-[OK] games/breakout/docs.html
-[OK] games/breakout/script.js
-[OK] games/breakout/style.css
+[OK] public/games/breakout/index.html
+[OK] public/games/breakout/docs.html
+[OK] public/games/breakout/script.js
+[OK] public/games/breakout/style.css
+[OK] public/games/breakout/game.html (recomendado)
+[WARN] Recomendado ausente: public/games/breakout/README.md
 [INFO] Validando game: campo-minado
-[OK] games/campo-minado/index.html
-[OK] games/campo-minado/docs.html
-[OK] games/campo-minado/script.js
-[OK] games/campo-minado/style.css
+[OK] public/games/campo-minado/index.html
+[OK] public/games/campo-minado/docs.html
+[OK] public/games/campo-minado/script.js
+[OK] public/games/campo-minado/style.css
+[OK] public/games/campo-minado/game.html (recomendado)
+[OK] public/games/campo-minado/README.md (recomendado)
 [INFO] Validando game: checkers
-[OK] games/checkers/index.html
-[OK] games/checkers/docs.html
-[OK] games/checkers/script.js
-[OK] games/checkers/style.css
+[OK] public/games/checkers/index.html
+[OK] public/games/checkers/docs.html
+[OK] public/games/checkers/script.js
+[OK] public/games/checkers/style.css
+[OK] public/games/checkers/game.html (recomendado)
+[OK] public/games/checkers/README.md (recomendado)
 [INFO] Validando game: chess
-[OK] games/chess/index.html
-[OK] games/chess/docs.html
-[OK] games/chess/script.js
-[OK] games/chess/style.css
+[OK] public/games/chess/index.html
+[OK] public/games/chess/docs.html
+[OK] public/games/chess/script.js
+[OK] public/games/chess/style.css
+[OK] public/games/chess/game.html (recomendado)
+[OK] public/games/chess/README.md (recomendado)
 [INFO] Validando game: flappy-bird
-[OK] games/flappy-bird/index.html
-[OK] games/flappy-bird/docs.html
-[OK] games/flappy-bird/script.js
-[OK] games/flappy-bird/style.css
+[OK] public/games/flappy-bird/index.html
+[OK] public/games/flappy-bird/docs.html
+[OK] public/games/flappy-bird/script.js
+[OK] public/games/flappy-bird/style.css
+[OK] public/games/flappy-bird/game.html (recomendado)
+[OK] public/games/flappy-bird/README.md (recomendado)
 [INFO] Validando game: memory-match-2
-[OK] games/memory-match-2/index.html
-[OK] games/memory-match-2/docs.html
-[OK] games/memory-match-2/script.js
-[OK] games/memory-match-2/style.css
+[OK] public/games/memory-match-2/index.html
+[OK] public/games/memory-match-2/docs.html
+[OK] public/games/memory-match-2/script.js
+[OK] public/games/memory-match-2/style.css
+[WARN] Recomendado ausente: public/games/memory-match-2/game.html
+[WARN] Recomendado ausente: public/games/memory-match-2/README.md
 [INFO] Validando game: pong-2
-[OK] games/pong-2/index.html
-[OK] games/pong-2/docs.html
-[OK] games/pong-2/script.js
-[OK] games/pong-2/style.css
+[OK] public/games/pong-2/index.html
+[OK] public/games/pong-2/docs.html
+[OK] public/games/pong-2/script.js
+[OK] public/games/pong-2/style.css
+[WARN] Recomendado ausente: public/games/pong-2/game.html
+[WARN] Recomendado ausente: public/games/pong-2/README.md
 [INFO] Validando game: snake-2
-[OK] games/snake-2/index.html
-[OK] games/snake-2/docs.html
-[OK] games/snake-2/script.js
-[OK] games/snake-2/style.css
+[OK] public/games/snake-2/index.html
+[OK] public/games/snake-2/docs.html
+[OK] public/games/snake-2/script.js
+[OK] public/games/snake-2/style.css
+[WARN] Recomendado ausente: public/games/snake-2/game.html
+[WARN] Recomendado ausente: public/games/snake-2/README.md
 [INFO] Validando game: space-invaders
-[OK] games/space-invaders/index.html
-[OK] games/space-invaders/docs.html
-[OK] games/space-invaders/script.js
-[OK] games/space-invaders/style.css
+[OK] public/games/space-invaders/index.html
+[OK] public/games/space-invaders/docs.html
+[OK] public/games/space-invaders/script.js
+[OK] public/games/space-invaders/style.css
+[OK] public/games/space-invaders/game.html (recomendado)
+[OK] public/games/space-invaders/README.md (recomendado)
 [INFO] Validando game: tetris
-[OK] games/tetris/index.html
-[OK] games/tetris/docs.html
-[OK] games/tetris/script.js
-[OK] games/tetris/style.css
+[OK] public/games/tetris/index.html
+[OK] public/games/tetris/docs.html
+[OK] public/games/tetris/script.js
+[OK] public/games/tetris/style.css
+[OK] public/games/tetris/game.html (recomendado)
+[WARN] Recomendado ausente: public/games/tetris/README.md
+[OK] Hub com main acessivel (src/App.vue)
+[OK] Hub com skip link (src/App.vue)
+[OK] Hub com Twitter card (index.html)
+[OK] Meta description (public/games/asteroids/docs.html)
+[OK] Open Graph title (public/games/asteroids/docs.html)
+[OK] Open Graph description (public/games/asteroids/docs.html)
+[OK] Open Graph type (public/games/asteroids/docs.html)
+[OK] Twitter card (public/games/asteroids/docs.html)
+[OK] Landmark main com id/tabindex (public/games/asteroids/docs.html)
+[OK] Skip link (public/games/asteroids/docs.html)
+[OK] Nav com aria-label (public/games/asteroids/docs.html)
+[OK] Meta description (public/games/asteroids/game.html)
+[OK] Open Graph title (public/games/asteroids/game.html)
+[OK] Open Graph description (public/games/asteroids/game.html)
+[OK] Open Graph type (public/games/asteroids/game.html)
+[OK] Twitter card (public/games/asteroids/game.html)
+[OK] Landmark main com id/tabindex (public/games/asteroids/game.html)
+[OK] Skip link (public/games/asteroids/game.html)
+[OK] Meta description (public/games/asteroids/index.html)
+[OK] Open Graph title (public/games/asteroids/index.html)
+[OK] Open Graph description (public/games/asteroids/index.html)
+[OK] Open Graph type (public/games/asteroids/index.html)
+[OK] Twitter card (public/games/asteroids/index.html)
+[OK] Landmark main com id/tabindex (public/games/asteroids/index.html)
+[OK] Skip link (public/games/asteroids/index.html)
+[OK] Nav com aria-label (public/games/asteroids/index.html)
+[OK] Meta description (public/games/blackjack/docs.html)
+[OK] Open Graph title (public/games/blackjack/docs.html)
+[OK] Open Graph description (public/games/blackjack/docs.html)
+[OK] Open Graph type (public/games/blackjack/docs.html)
+[OK] Twitter card (public/games/blackjack/docs.html)
+[OK] Landmark main com id/tabindex (public/games/blackjack/docs.html)
+[OK] Skip link (public/games/blackjack/docs.html)
+[OK] Nav com aria-label (public/games/blackjack/docs.html)
+[OK] Meta description (public/games/blackjack/game.html)
+[OK] Open Graph title (public/games/blackjack/game.html)
+[OK] Open Graph description (public/games/blackjack/game.html)
+[OK] Open Graph type (public/games/blackjack/game.html)
+[OK] Twitter card (public/games/blackjack/game.html)
+[OK] Landmark main com id/tabindex (public/games/blackjack/game.html)
+[OK] Skip link (public/games/blackjack/game.html)
+[OK] Meta description (public/games/blackjack/index.html)
+[OK] Open Graph title (public/games/blackjack/index.html)
+[OK] Open Graph description (public/games/blackjack/index.html)
+[OK] Open Graph type (public/games/blackjack/index.html)
+[OK] Twitter card (public/games/blackjack/index.html)
+[OK] Landmark main com id/tabindex (public/games/blackjack/index.html)
+[OK] Skip link (public/games/blackjack/index.html)
+[OK] Nav com aria-label (public/games/blackjack/index.html)
+[OK] Meta description (public/games/breakout/docs.html)
+[OK] Open Graph title (public/games/breakout/docs.html)
+[OK] Open Graph description (public/games/breakout/docs.html)
+[OK] Open Graph type (public/games/breakout/docs.html)
+[OK] Twitter card (public/games/breakout/docs.html)
+[OK] Landmark main com id/tabindex (public/games/breakout/docs.html)
+[OK] Skip link (public/games/breakout/docs.html)
+[OK] Nav com aria-label (public/games/breakout/docs.html)
+[OK] Meta description (public/games/breakout/game.html)
+[OK] Open Graph title (public/games/breakout/game.html)
+[OK] Open Graph description (public/games/breakout/game.html)
+[OK] Open Graph type (public/games/breakout/game.html)
+[OK] Twitter card (public/games/breakout/game.html)
+[OK] Landmark main com id/tabindex (public/games/breakout/game.html)
+[OK] Skip link (public/games/breakout/game.html)
+[OK] Meta description (public/games/breakout/index.html)
+[OK] Open Graph title (public/games/breakout/index.html)
+[OK] Open Graph description (public/games/breakout/index.html)
+[OK] Open Graph type (public/games/breakout/index.html)
+[OK] Twitter card (public/games/breakout/index.html)
+[OK] Landmark main com id/tabindex (public/games/breakout/index.html)
+[OK] Skip link (public/games/breakout/index.html)
+[OK] Nav com aria-label (public/games/breakout/index.html)
+[OK] Meta description (public/games/campo-minado/docs.html)
+[OK] Open Graph title (public/games/campo-minado/docs.html)
+[OK] Open Graph description (public/games/campo-minado/docs.html)
+[OK] Open Graph type (public/games/campo-minado/docs.html)
+[OK] Twitter card (public/games/campo-minado/docs.html)
+[OK] Landmark main com id/tabindex (public/games/campo-minado/docs.html)
+[OK] Skip link (public/games/campo-minado/docs.html)
+[OK] Nav com aria-label (public/games/campo-minado/docs.html)
+[OK] Meta description (public/games/campo-minado/game.html)
+[OK] Open Graph title (public/games/campo-minado/game.html)
+[OK] Open Graph description (public/games/campo-minado/game.html)
+[OK] Open Graph type (public/games/campo-minado/game.html)
+[OK] Twitter card (public/games/campo-minado/game.html)
+[OK] Landmark main com id/tabindex (public/games/campo-minado/game.html)
+[OK] Skip link (public/games/campo-minado/game.html)
+[OK] Meta description (public/games/campo-minado/index.html)
+[OK] Open Graph title (public/games/campo-minado/index.html)
+[OK] Open Graph description (public/games/campo-minado/index.html)
+[OK] Open Graph type (public/games/campo-minado/index.html)
+[OK] Twitter card (public/games/campo-minado/index.html)
+[OK] Landmark main com id/tabindex (public/games/campo-minado/index.html)
+[OK] Skip link (public/games/campo-minado/index.html)
+[OK] Nav com aria-label (public/games/campo-minado/index.html)
+[OK] Meta description (public/games/checkers/docs.html)
+[OK] Open Graph title (public/games/checkers/docs.html)
+[OK] Open Graph description (public/games/checkers/docs.html)
+[OK] Open Graph type (public/games/checkers/docs.html)
+[OK] Twitter card (public/games/checkers/docs.html)
+[OK] Landmark main com id/tabindex (public/games/checkers/docs.html)
+[OK] Skip link (public/games/checkers/docs.html)
+[OK] Nav com aria-label (public/games/checkers/docs.html)
+[OK] Meta description (public/games/checkers/game.html)
+[OK] Open Graph title (public/games/checkers/game.html)
+[OK] Open Graph description (public/games/checkers/game.html)
+[OK] Open Graph type (public/games/checkers/game.html)
+[OK] Twitter card (public/games/checkers/game.html)
+[OK] Landmark main com id/tabindex (public/games/checkers/game.html)
+[OK] Skip link (public/games/checkers/game.html)
+[OK] Meta description (public/games/checkers/index.html)
+[OK] Open Graph title (public/games/checkers/index.html)
+[OK] Open Graph description (public/games/checkers/index.html)
+[OK] Open Graph type (public/games/checkers/index.html)
+[OK] Twitter card (public/games/checkers/index.html)
+[OK] Landmark main com id/tabindex (public/games/checkers/index.html)
+[OK] Skip link (public/games/checkers/index.html)
+[OK] Nav com aria-label (public/games/checkers/index.html)
+[OK] Meta description (public/games/chess/docs.html)
+[OK] Open Graph title (public/games/chess/docs.html)
+[OK] Open Graph description (public/games/chess/docs.html)
+[OK] Open Graph type (public/games/chess/docs.html)
+[OK] Twitter card (public/games/chess/docs.html)
+[OK] Landmark main com id/tabindex (public/games/chess/docs.html)
+[OK] Skip link (public/games/chess/docs.html)
+[OK] Nav com aria-label (public/games/chess/docs.html)
+[OK] Meta description (public/games/chess/game.html)
+[OK] Open Graph title (public/games/chess/game.html)
+[OK] Open Graph description (public/games/chess/game.html)
+[OK] Open Graph type (public/games/chess/game.html)
+[OK] Twitter card (public/games/chess/game.html)
+[OK] Landmark main com id/tabindex (public/games/chess/game.html)
+[OK] Skip link (public/games/chess/game.html)
+[OK] Meta description (public/games/chess/index.html)
+[OK] Open Graph title (public/games/chess/index.html)
+[OK] Open Graph description (public/games/chess/index.html)
+[OK] Open Graph type (public/games/chess/index.html)
+[OK] Twitter card (public/games/chess/index.html)
+[OK] Landmark main com id/tabindex (public/games/chess/index.html)
+[OK] Skip link (public/games/chess/index.html)
+[OK] Nav com aria-label (public/games/chess/index.html)
+[OK] Meta description (public/games/flappy-bird/docs.html)
+[OK] Open Graph title (public/games/flappy-bird/docs.html)
+[OK] Open Graph description (public/games/flappy-bird/docs.html)
+[OK] Open Graph type (public/games/flappy-bird/docs.html)
+[OK] Twitter card (public/games/flappy-bird/docs.html)
+[OK] Landmark main com id/tabindex (public/games/flappy-bird/docs.html)
+[OK] Skip link (public/games/flappy-bird/docs.html)
+[OK] Nav com aria-label (public/games/flappy-bird/docs.html)
+[OK] Meta description (public/games/flappy-bird/game.html)
+[OK] Open Graph title (public/games/flappy-bird/game.html)
+[OK] Open Graph description (public/games/flappy-bird/game.html)
+[OK] Open Graph type (public/games/flappy-bird/game.html)
+[OK] Twitter card (public/games/flappy-bird/game.html)
+[OK] Landmark main com id/tabindex (public/games/flappy-bird/game.html)
+[OK] Skip link (public/games/flappy-bird/game.html)
+[OK] Meta description (public/games/flappy-bird/index.html)
+[OK] Open Graph title (public/games/flappy-bird/index.html)
+[OK] Open Graph description (public/games/flappy-bird/index.html)
+[OK] Open Graph type (public/games/flappy-bird/index.html)
+[OK] Twitter card (public/games/flappy-bird/index.html)
+[OK] Landmark main com id/tabindex (public/games/flappy-bird/index.html)
+[OK] Skip link (public/games/flappy-bird/index.html)
+[OK] Nav com aria-label (public/games/flappy-bird/index.html)
+[OK] Meta description (public/games/memory-match-2/docs.html)
+[OK] Open Graph title (public/games/memory-match-2/docs.html)
+[OK] Open Graph description (public/games/memory-match-2/docs.html)
+[OK] Open Graph type (public/games/memory-match-2/docs.html)
+[OK] Twitter card (public/games/memory-match-2/docs.html)
+[OK] Landmark main com id/tabindex (public/games/memory-match-2/docs.html)
+[OK] Skip link (public/games/memory-match-2/docs.html)
+[OK] Meta description (public/games/memory-match-2/index.html)
+[OK] Open Graph title (public/games/memory-match-2/index.html)
+[OK] Open Graph description (public/games/memory-match-2/index.html)
+[OK] Open Graph type (public/games/memory-match-2/index.html)
+[OK] Twitter card (public/games/memory-match-2/index.html)
+[OK] Landmark main com id/tabindex (public/games/memory-match-2/index.html)
+[OK] Skip link (public/games/memory-match-2/index.html)
+[OK] Nav com aria-label (public/games/memory-match-2/index.html)
+[OK] Meta description (public/games/pong-2/docs.html)
+[OK] Open Graph title (public/games/pong-2/docs.html)
+[OK] Open Graph description (public/games/pong-2/docs.html)
+[OK] Open Graph type (public/games/pong-2/docs.html)
+[OK] Twitter card (public/games/pong-2/docs.html)
+[OK] Landmark main com id/tabindex (public/games/pong-2/docs.html)
+[OK] Skip link (public/games/pong-2/docs.html)
+[OK] Meta description (public/games/pong-2/index.html)
+[OK] Open Graph title (public/games/pong-2/index.html)
+[OK] Open Graph description (public/games/pong-2/index.html)
+[OK] Open Graph type (public/games/pong-2/index.html)
+[OK] Twitter card (public/games/pong-2/index.html)
+[OK] Landmark main com id/tabindex (public/games/pong-2/index.html)
+[OK] Skip link (public/games/pong-2/index.html)
+[OK] Nav com aria-label (public/games/pong-2/index.html)
+[OK] Meta description (public/games/snake-2/docs.html)
+[OK] Open Graph title (public/games/snake-2/docs.html)
+[OK] Open Graph description (public/games/snake-2/docs.html)
+[OK] Open Graph type (public/games/snake-2/docs.html)
+[OK] Twitter card (public/games/snake-2/docs.html)
+[OK] Landmark main com id/tabindex (public/games/snake-2/docs.html)
+[OK] Skip link (public/games/snake-2/docs.html)
+[OK] Meta description (public/games/snake-2/index.html)
+[OK] Open Graph title (public/games/snake-2/index.html)
+[OK] Open Graph description (public/games/snake-2/index.html)
+[OK] Open Graph type (public/games/snake-2/index.html)
+[OK] Twitter card (public/games/snake-2/index.html)
+[OK] Landmark main com id/tabindex (public/games/snake-2/index.html)
+[OK] Skip link (public/games/snake-2/index.html)
+[OK] Nav com aria-label (public/games/snake-2/index.html)
+[OK] Meta description (public/games/space-invaders/docs.html)
+[OK] Open Graph title (public/games/space-invaders/docs.html)
+[OK] Open Graph description (public/games/space-invaders/docs.html)
+[OK] Open Graph type (public/games/space-invaders/docs.html)
+[OK] Twitter card (public/games/space-invaders/docs.html)
+[OK] Landmark main com id/tabindex (public/games/space-invaders/docs.html)
+[OK] Skip link (public/games/space-invaders/docs.html)
+[OK] Nav com aria-label (public/games/space-invaders/docs.html)
+[OK] Meta description (public/games/space-invaders/game.html)
+[OK] Open Graph title (public/games/space-invaders/game.html)
+[OK] Open Graph description (public/games/space-invaders/game.html)
+[OK] Open Graph type (public/games/space-invaders/game.html)
+[OK] Twitter card (public/games/space-invaders/game.html)
+[OK] Landmark main com id/tabindex (public/games/space-invaders/game.html)
+[OK] Skip link (public/games/space-invaders/game.html)
+[OK] Meta description (public/games/space-invaders/index.html)
+[OK] Open Graph title (public/games/space-invaders/index.html)
+[OK] Open Graph description (public/games/space-invaders/index.html)
+[OK] Open Graph type (public/games/space-invaders/index.html)
+[OK] Twitter card (public/games/space-invaders/index.html)
+[OK] Landmark main com id/tabindex (public/games/space-invaders/index.html)
+[OK] Skip link (public/games/space-invaders/index.html)
+[OK] Nav com aria-label (public/games/space-invaders/index.html)
+[OK] Meta description (public/games/tetris/docs.html)
+[OK] Open Graph title (public/games/tetris/docs.html)
+[OK] Open Graph description (public/games/tetris/docs.html)
+[OK] Open Graph type (public/games/tetris/docs.html)
+[OK] Twitter card (public/games/tetris/docs.html)
+[OK] Landmark main com id/tabindex (public/games/tetris/docs.html)
+[OK] Skip link (public/games/tetris/docs.html)
+[OK] Nav com aria-label (public/games/tetris/docs.html)
+[OK] Meta description (public/games/tetris/game.html)
+[OK] Open Graph title (public/games/tetris/game.html)
+[OK] Open Graph description (public/games/tetris/game.html)
+[OK] Open Graph type (public/games/tetris/game.html)
+[OK] Twitter card (public/games/tetris/game.html)
+[OK] Landmark main com id/tabindex (public/games/tetris/game.html)
+[OK] Skip link (public/games/tetris/game.html)
+[OK] Meta description (public/games/tetris/index.html)
+[OK] Open Graph title (public/games/tetris/index.html)
+[OK] Open Graph description (public/games/tetris/index.html)
+[OK] Open Graph type (public/games/tetris/index.html)
+[OK] Twitter card (public/games/tetris/index.html)
+[OK] Landmark main com id/tabindex (public/games/tetris/index.html)
+[OK] Skip link (public/games/tetris/index.html)
+[OK] Nav com aria-label (public/games/tetris/index.html)
 [INFO] Relatorio markdown: /home/zerocool/Documentos/NullCipherr/Retro-Games-Hub/docs/reports/latest_validacao_report.md
 [INFO] Log bruto: /home/zerocool/Documentos/NullCipherr/Retro-Games-Hub/docs/reports/latest_validacao_report.raw.log

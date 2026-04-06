@@ -31,7 +31,11 @@ Esse arquivo centraliza os componentes de layout e estilo reutilizáveis.
 2. Preencha placeholders (nome, descrição, controles, cores e links).
 3. Mantenha o link para `../../assets/css/game-ui.css`.
 4. Crie `style.css` local apenas para regras específicas do jogo (canvas, cartas, peças etc.).
-5. Atualize catálogo com:
+5. Garanta contrato mínimo de SEO e acessibilidade em todas as páginas HTML do jogo:
+- `meta description`, `og:title`, `og:description`, `og:type`, `twitter:card`;
+- `skip-link` + `<main id="main-content" tabindex="-1">`;
+- `aria-label` em cada `<nav>` relevante.
+6. Atualize catálogo com:
 
 ```bash
 ./scripts/sync-games-catalog.sh

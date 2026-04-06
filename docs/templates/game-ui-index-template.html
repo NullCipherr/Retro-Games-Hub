@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{NOME_DO_JOGO}} - ARCGames</title>
   <meta name="description" content="{{DESCRICAO_CURTA_DO_JOGO}}" />
+  <meta property="og:title" content="{{NOME_DO_JOGO}} - ARCGames" />
+  <meta property="og:description" content="{{DESCRICAO_CURTA_DO_JOGO}}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -19,15 +23,16 @@
 </head>
 
 <body class="game-ui-body">
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
   <header class="topbar">
     <a class="brand" href="../../index.html">ARCGames</a>
-    <nav class="links">
+    <nav class="links" aria-label="Navegação de apoio">
       <a href="../../index.html">Hub</a>
       <a href="docs.html">Guia</a>
     </nav>
   </header>
 
-  <main class="layout">
+  <main id="main-content" tabindex="-1" class="layout">
     <section class="game-shell" aria-label="Entrada do jogo {{NOME_DO_JOGO}}">
       <div class="overlay overlay-static">
         <h1>{{NOME_DO_JOGO}}</h1>

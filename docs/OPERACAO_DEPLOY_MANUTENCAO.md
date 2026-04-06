@@ -42,4 +42,5 @@ Acesso: `http://localhost:3000`
 - busca e filtros do hub funcionam;
 - sem erros críticos no console em fluxo principal;
 - catálogo sincronizado (`./scripts/sync-games-catalog.sh`);
-- validação estrutural executada com sucesso (`./scripts/run_validation.sh`).
+- validação estrutural + SEO + acessibilidade executada com sucesso (`./scripts/run_validation.sh`);
+- checklist responsivo preenchido (`docs/CHECKLIST_RELEASE_RESPONSIVO.md`).

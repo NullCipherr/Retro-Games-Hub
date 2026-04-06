@@ -8,11 +8,12 @@
 - uso de `lang="pt-BR"` no documento principal;
 - interface responsiva com foco em experiência visual consistente;
 - separação entre estilos globais e estilos específicos do hub/jogos.
+- SEO mínimo padronizado nas páginas de jogos (`description`, `Open Graph` e `twitter:card`);
+- landmarks e skip-link aplicados como contrato base de acessibilidade.
 
 ### Pontos de atenção
 
-- metadados SEO ainda básicos (faltam Open Graph/Twitter cards);
-- ausência de landmarks e labels em algumas telas/jogos;
+- SEO técnico ainda pode evoluir com canonical/sitemap/robots;
 - baixa cobertura de navegação por teclado em partes da UI;
 - falta de automação de auditoria (Lighthouse/axe) no pipeline.
 

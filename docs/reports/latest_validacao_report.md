@@ -1,16 +1,20 @@
 # Relatorio de Validacao Estrutural
 
-- Data: `2026-03-29`
-- Execucao: `2026-03-29T19:01:06-03:00`
+- Data: `2026-04-05`
+- Execucao: `2026-04-05T21:16:22-03:00`
 - Script: `./scripts/run_validation.sh`
 - Status final: `ok`
 
 | Item | Valor |
 | --- | ---: |
 | Jogos mapeados | 12 |
-| Validacoes com sucesso | 54 |
+| HTML de jogos validados (SEO/A11y) | 33 |
+| Validacoes com sucesso | 326 |
+| Alertas (itens recomendados) | 8 |
 | Validacoes com falha | 0 |
+| Contratos SEO validados | 33 |
+| Contratos A11y validados | 33 |
 
 ## Resultado
 
-Validacao estrutural concluida sem falhas.
+Validação estrutural, SEO mínimo e acessibilidade básica concluída sem falhas críticas.

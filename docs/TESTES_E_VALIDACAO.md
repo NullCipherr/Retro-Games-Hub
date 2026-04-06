@@ -6,7 +6,7 @@ O projeto ainda não possui suíte automatizada de testes de gameplay.
 
 Atualmente, a verificação está organizada em duas camadas:
 
-- **Validação estrutural automatizada** por script shell;
+- **Validação automatizada de estrutura + SEO mínimo + acessibilidade básica** por script shell;
 - **Validação funcional manual** com roteiro de smoke test.
 
 ## Script de validação estrutural

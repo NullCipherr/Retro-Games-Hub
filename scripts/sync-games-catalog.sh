@@ -2,8 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-GAMES_DIR="$ROOT_DIR/games"
-OUT_DIR="$ROOT_DIR/assets/data"
+GAMES_DIR="$ROOT_DIR/public/games"
+OUT_DIR="$ROOT_DIR/public/assets/data"
 OUT_FILE="$OUT_DIR/games-catalog.json"
 
 mkdir -p "$OUT_DIR"

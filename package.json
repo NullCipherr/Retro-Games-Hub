@@ -1,0 +1,20 @@
+{
+  "name": "retro-games-hub",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync:catalog": "bash ./scripts/sync-games-catalog.sh",
+    "validate": "bash ./scripts/run_validation.sh"
+  },
+  "dependencies": {
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7"
+  }
+}
